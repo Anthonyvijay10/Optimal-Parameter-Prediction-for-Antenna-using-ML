@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_result.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+        <p>s11 Value: {{ s11 }}</p>
+        <p>vswr Value: {{ vswr }}</p>
+        <p>s11 result: {{ s11_optimal }}</p>
+        <p>vswr result: {{ vswr_optimal }}</p>
+    </div>
+</body>
+</html>
