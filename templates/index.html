@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictor</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Predictor</h1>
+    <p>This is a simple web app that predicts 's11' and 'vswr' values based on input features.</p>
+    <form action="/predict" method="get">
+        <label for="split_width">Split Width (g):</label>
+        <input type="number" id="split_width" name="split_width" step="0.01" value="0.5" required><br><br>
+
+        <label for="dis_bw_rings">Radius (r):</label>
+        <input type="number" id="dis_bw_rings" name="dis_bw_rings" step="0.01" value="0.4" required><br><br>
+
+        <label for="freq_ghz">Frequency (GHz):</label>
+        <input type="number" id="freq_ghz" name="freq_ghz" step="0.01" value="0" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+    <!-- You can add more content or scripts below -->
+</body>
+</html>
