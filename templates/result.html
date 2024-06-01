@@ -7,13 +7,15 @@
     <!-- Link to your CSS file -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_result.css') }}">
 </head>
-<body>
-    <div class="container">
-        <h1>Result</h1>
-        <p>s11 Value: {{ s11 }}</p>
-        <p>vswr Value: {{ vswr }}</p>
-        <p>s11 result: {{ s11_optimal }}</p>
-        <p>vswr result: {{ vswr_optimal }}</p>
+<center>
+<body style="background-image: linear-gradient(to right,#0052D4,#6FB1FC,#4364F7);margin-top:150px;">
+    <div class="container" style="background-color:#203A43; width: 250px;">
+        <h1 style="font-weight: bolder;color: rgb(0, 13, 255);">Result</h1>
+        <p style="color: white;">s11 Value: {{ "%.8f"|format(s11) }}</p>
+        <p style="color: white;">vswr Value: {{ "%.8f"|format(vswr) }}</p>
+        <p style="color: white;">s11 result: {{ s11_optimal }}</p>
+        <p style="color: white;">vswr result: {{ vswr_optimal }}</p>
     </div>
 </body>
+</center>
 </html>

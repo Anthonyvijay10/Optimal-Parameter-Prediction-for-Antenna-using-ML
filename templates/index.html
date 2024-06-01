@@ -5,23 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predictor</title>
     <!-- Link to your CSS file -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">    
+    <link rel="stylesheet" href="../static/style.css">
 </head>
-<body>
-    <h1>Predictor</h1>
-    <p>This is a simple web app that predicts 's11' and 'vswr' values based on input features.</p>
+<body style="background-image: linear-gradient(to right,#0052D4,#6FB1FC,#4364F7);">
+    <center>
+        <div style="border: 2px solid black;border-radius: 30px; text-decoration: underline; padding: 20px; width: 600px;margin: 20px;display: flex;align-content:space-around;align-items: center;">
+            <img src="https://srec.ac.in/themes/frontend/images/no_image.jpg" alt="">
+            <h1 style="color:#0F2027;font-weight: bolder;">ANTENNA PERFORMANCE PREDICTION</h1>
+            <img src="https://www.snrsonscharitabletrust.org/assets/img/our-cause-pic.jpg" alt="">
+        </div>
+        <p style="font-weight: 600;color: black;font-size: 20px;">This is a web app that predicts 's11' and 'vswr' values based on input features.</p>
+<div style="margin-top: 50px;margin-bottom: 50px;margin-left: 650px;margin-right: 650px;">
     <form action="/predict" method="get">
-        <label for="split_width">Split Width (g):</label>
-        <input type="number" id="split_width" name="split_width" step="0.01" value="0.5" required><br><br>
+        <div class="image">
+            <label for="split_width">Split Width (g):</label>
+            <input type="number" id="split_width" name="split_width" step="0.00000001" value="0.5" required style="width: auto;"><br><br>
 
-        <label for="dis_bw_rings">Radius (r):</label>
-        <input type="number" id="dis_bw_rings" name="dis_bw_rings" step="0.01" value="0.4" required><br><br>
+            <label for="dis_bw_rings">Distance (d):</label>
+            <input type="number" id="dis_bw_rings" name="dis_bw_rings" step="0.0000001" value="0.4" required style="width: auto;"><br><br>
 
-        <label for="freq_ghz">Frequency (GHz):</label>
-        <input type="number" id="freq_ghz" name="freq_ghz" step="0.01" value="0" required><br><br>
+            <label for="freq_ghz">Frequency (GHz):</label>
+            <input type="number" id="freq_ghz" name="freq_ghz" step="0.00000001" value="0" required style="width: auto;"><br><br>
 
-        <button type="submit">Predict</button>
+            <button type="submit">PREDICT</button>
+        </div>
+
     </form>
+    
+</div>
+</center>
     <!-- You can add more content or scripts below -->
 </body>
 </html>
